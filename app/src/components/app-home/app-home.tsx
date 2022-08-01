@@ -47,6 +47,7 @@ export class AppHome {
       formData.append(`keywords[${i}]`, item)
     })
 
+    // using a node server
     const response = await Axios.post(apis['ENCRYPT_DOC'], formData, {
        headers: {
           "Content-Type": "multipart/form-data",
@@ -60,6 +61,38 @@ export class AppHome {
     link.setAttribute('download', 'file.txt'); //or any other extension
     document.body.appendChild(link);
     link.click();
+
+    // without node server
+
+    const reader = new FileReader()
+
+   if(this.inputFileUploader.files.length > 0){
+     reader.onload = async (e) => {
+      e.preventDefault()
+
+      const text = (e.target.result);
+
+
+
+       const keywords: string[] = words;
+
+
+
+        let updatedContent = text.toString();
+
+        keywords.forEach(item => {
+          const regex = new RegExp(item, 'g')
+          updatedContent = updatedContent.replace(regex, 'XXXX')
+        })
+
+        updatedContent += '\nKeywords: ' + keywords.join(',')
+
+         this.download('encrypt.txt', updatedContent)
+
+    }
+
+    reader.readAsText(this.inputFileUploader.files[0])
+   }
   }
 
   /**
@@ -67,7 +100,26 @@ export class AppHome {
    */
   handleOnFileSelect = () => {
     this.title = this.inputFileUploader.files[0]?.name
+
   }
+
+  /**
+   *
+   * @param filename
+   * @param text
+   */
+  download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  // element.click();
+
+  document.body.removeChild(element);
+}
 
   /**
    *
