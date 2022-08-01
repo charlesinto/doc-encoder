@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 
 This will also setup a NodeJS backend server running on a default Port of 8005 if not provided<br>
 
-[http://localhost:8000](http://localhost:8005)
+[http://localhost:8005](http://localhost:8005)
 
 ### `yarn test`
 
