@@ -10,7 +10,8 @@
     "installDeps": "cd app && npm install && cd .. && cd server && npm install && cd ..",
     "clientProd": "cd app && npm run build && cd ..",
     "serverProd": "cd server && npm run build && cd ..",
-    "build": "npm run clientProd && npm run serverProd"
+    "build": "npm run clientProd && npm run serverProd",
+    "test":"cd app && npm run test && cd .."
   },
   "repository": {
     "type": "git",
