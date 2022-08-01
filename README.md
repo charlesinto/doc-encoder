@@ -18,7 +18,7 @@ This will also setup a NodeJS backend server running on a default Port of 8005 i
 
 [http://localhost:8005](http://localhost:8005)
 
-### `yarn test`
+### `npm run test`
 
 Launches the test runner
 
