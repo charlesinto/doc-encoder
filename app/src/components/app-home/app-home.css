@@ -1,0 +1,120 @@
+
+.app-home{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container{
+  max-width: 1024px;
+  margin: 40px auto;
+}
+
+
+.row{
+  display: flex;
+}
+
+.col-md-12{
+  width: 100%;
+}
+
+
+.shadow{
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.p-3{
+  padding: 12px;
+}
+
+.load-content{
+      padding: 24px;
+        border: 2px dashed #ddd;
+        position: relative;
+
+}
+
+
+.new-btn{
+  cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+    vertical-align: middle;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-transition: border .15s;
+    -o-transition: border .15s;
+    transition: border .15s;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    width: auto;
+}
+
+.btn-orange{
+ background-image:  linear-gradient(#ffa300, #f70)
+}
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.my-3{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+
+textarea{
+      width: 100%;
+        padding-left: 8px;
+        padding-top: 8px;
+        max-height: 200px;
+        min-height: 60px;
+        padding-bottom: 8px;
+        overflow-y: scroll;
+}
+
+.col{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.btn-blue{
+  background-color: rgb(76, 72, 255);
+}
+
+
+.hidden{
+  visibility: hidden;
+  position: absolute;
+}
+
+.load-content-subtitle{
+      color: #666;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+}
+
+.load-content-title{
+  font-size: 24px;
+    margin: 0 0 5px;
+    color: #444;
+    line-height: 27px;
+    text-align: center;
+}
