@@ -35,7 +35,7 @@ class DocumentManagerController{
           updatedContent = updatedContent.replace(regex, REPLACE_VALUE)
         })
 
-        updatedContent += '\n Keywords: ' + keywords.join(',')
+        updatedContent += '\nKeywords: ' + keywords.join(',')
 
        fs.writeFileSync(filePath, updatedContent, {encoding: 'utf-8', flag: 'w'})
 
