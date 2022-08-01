@@ -12,24 +12,25 @@ export class AppHome {
   private inputFileUploader?: HTMLInputElement
 
   /**
-   *
+   *  Keyword values
    */
   @State() keywords : string = ''
 
   /**
-   *
+   * Updated to the name of the file selected
    */
   @State() title: string = 'Upload Document'
 
   /**
-   *
+   *  Handler when the button to select a file is clicked
    */
   handleFileOnClick = () => {
+      // opens the file explorer
       this.inputFileUploader?.click()
   }
 
   /**
-   *
+   *  Handler to Encryption
    * @returns
    */
   handleOnEncrypt = async () => {
@@ -96,7 +97,7 @@ export class AppHome {
   }
 
   /**
-   *
+   *  When a file is selected, get the name of the file and update the title state variable
    */
   handleOnFileSelect = () => {
     this.title = this.inputFileUploader.files[0]?.name
