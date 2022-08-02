@@ -25,3 +25,7 @@ Launches the test runner
 ### `npm run build`
 
 Builds the app for production.
+
+### Loom Video
+
+[Demo Video](https://www.loom.com/share/31b88cdcf05441c5b0bb124e3127b6fe)
